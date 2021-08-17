@@ -13,6 +13,7 @@
   font-size: 1.25rem;
   font-weight: normal;
   letter-spacing: 0.25rem;
+  color: #fff;
 }
 
 .name {
@@ -20,14 +21,14 @@
   letter-spacing: 0.25rem;
   font-size: 3rem;
   margin: 1rem 0;
-  color: #deeed1;
+  color: $color-light;
 }
 
 .subtitle {
   font-weight: 700;
   letter-spacing: 0.25rem;
   font-size: 3rem;
-  color: #8bd38b;
+  color: $color-primary;
 }
 
 .body {
@@ -37,11 +38,11 @@
   font-size: 18px;
   line-height: 1.5rem;
   letter-spacing: 1px;
-  color: $font-color;
+  color: $color-primary;
 }
 
 .company {
-  color: #72e2ae;
+  color: $company;
   cursor: pointer;
   &:hover {
     text-decoration: underline;

@@ -2,15 +2,15 @@
 
 .button {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid $color-light;
   padding: 1rem;
-  color: #fff;
+  color: $color-light;
   border-radius: 0.25rem;
   font-size: 16px;
   cursor: pointer;
 
   &:hover {
-    background-color: $font-color;
+    background-color: $color-secondary;
   }
 
   transition: background-color 0.2s ease-in-out;

@@ -20,14 +20,14 @@
 
 .menuItem {
   padding: 0 1rem;
-  color: #dbfadb;
+  color: $color-light;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
 }
 
 .menuNumber {
-  color: #39ff14;
+  color: $color-primary;
   padding: 0 0.125rem;
   letter-spacing: 0px;
 }
