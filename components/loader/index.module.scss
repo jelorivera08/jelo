@@ -45,6 +45,22 @@
   60% {
     text-shadow: none;
   }
+
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes flicker-box {

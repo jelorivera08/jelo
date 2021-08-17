@@ -1,0 +1,22 @@
+@import "styles/variables";
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: $color-primary;
+  font-family: "Sacramento", cursive;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+    0 0 40px $color-primary, 0 0 80px $color-primary;
+}

@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.container {
+  color: $color-secondary;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.icon {
+  padding: 1rem 1.5rem;
+}
+
+.menubar {
+  display: flex;
+  font-size: 16px;
+  font-family: "STIX Two Text", serif;
+}
+
+.menuItem {
+  padding: 0 1rem;
+  color: #dbfadb;
+  letter-spacing: 1px;
+}
+
+.menuNumber {
+  color: #39ff14;
+  padding: 0 0.125rem;
+  letter-spacing: 0px;
+}
