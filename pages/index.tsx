@@ -12,9 +12,10 @@ const Home: NextPage = () => {
     setTimeout(() => setIsLoading(false), 3000);
   }, []);
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // TO-DO:
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <div className={classes.home}>
