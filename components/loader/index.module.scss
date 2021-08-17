@@ -1,0 +1,67 @@
+@import "styles/variables";
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 5rem;
+  width: 5rem;
+  border: 0.125rem solid $color-primary;
+  border-radius: 10rem;
+  animation: flicker-box 4s step-end forwards;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  color: $color-primary;
+  font-family: "Sacramento", cursive;
+  animation: flicker-text 4s step-end forwards;
+}
+
+@keyframes flicker-text {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px $color-primary, 0 0 80px $color-primary;
+  }
+
+  30%,
+  40%,
+  60% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker-box {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px $color-primary, 0 0 80px $color-primary;
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
