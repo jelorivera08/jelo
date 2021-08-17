@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Loader from "components/loader";
 import AppBar from "components/appbar";
+import Intro from "components/intro";
 import { useEffect, useState } from "react";
+import classes from "styles/home.module.scss";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,8 +17,9 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div>
+    <div className={classes.home}>
       <AppBar />
+      <Intro />
     </div>
   );
 };

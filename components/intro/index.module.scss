@@ -1,0 +1,53 @@
+@import "styles/variables";
+
+.container {
+  color: $color-secondary;
+  height: 3rem;
+  justify-content: space-between;
+  padding: 2rem;
+  font-family: "STIX Two Text", serif;
+  padding: 10rem;
+}
+
+.intro {
+  font-size: 1.25rem;
+  font-weight: normal;
+  letter-spacing: 0.25rem;
+}
+
+.name {
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #deeed1;
+}
+
+.subtitle {
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+  color: #8bd38b;
+}
+
+.body {
+  padding-top: 1rem;
+  width: 70%;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: $font-color;
+}
+
+.company {
+  color: #72e2ae;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button {
+  margin: 2rem 0;
+}
