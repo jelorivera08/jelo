@@ -43,7 +43,7 @@ const AppBar = () => {
 
         <div className={cs(classes.menuItem, classes.resume)}>
           <Button className={classes.button}>
-            <Link href="/jelorivera.pdf">
+            <Link href="/resume.pdf">
               <a target="_blank">Resume</a>
             </Link>
           </Button>

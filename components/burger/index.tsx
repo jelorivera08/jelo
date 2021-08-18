@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cs from "classnames";
+import Link from "next/link";
 import Button from "components/button";
 import { Twirl as Hamburger } from "hamburger-react";
 import classes from "./index.module.scss";
@@ -30,7 +31,11 @@ const Burger = () => {
           </div>
 
           <div className={cs(classes.menuItem)}>
-            <Button className={classes.button}>Resume</Button>
+            <Button className={classes.button}>
+              <Link href="/resume.pdf">
+                <a target="_blank">Resume</a>
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
