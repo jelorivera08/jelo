@@ -3,11 +3,15 @@
 
 .container {
   color: $color-secondary;
-  height: 3rem;
   justify-content: space-between;
-  padding: 2rem;
   font-family: "STIX Two Text", serif;
-  padding: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  padding-top: 10rem;
+  max-width: 800px;
 }
 
 .intro {

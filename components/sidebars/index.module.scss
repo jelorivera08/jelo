@@ -4,6 +4,7 @@
 .left {
   position: fixed;
   left: 0;
+  top: 50%;
   opacity: 0;
   animation: slideRight 0.5s ease-in 0.2s forwards;
 }
@@ -11,6 +12,7 @@
 .right {
   position: fixed;
   right: 0;
+  top: 50%;
   opacity: 0;
   animation: slideLeft 0.5s ease-in 0.2s forwards;
 }
