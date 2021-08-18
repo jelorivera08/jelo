@@ -7,10 +7,12 @@
   font-family: "STIX Two Text", serif;
   display: flex;
   justify-content: center;
+  height: 80%;
+  max-height: 800px;
+  align-items: center;
 }
 
 .content {
-  padding-top: 10rem;
   max-width: 800px;
 }
 
@@ -66,4 +68,25 @@
   margin: 2rem 0;
   opacity: 0;
   animation: slideUp 0.5s ease-in 0.7s forwards;
+}
+
+@media screen and (max-width: 770px) {
+  .content {
+    padding: 0 2rem;
+    padding-top: 2rem;
+    max-width: unset;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .body {
+    font: 1rem;
+    width: 100%;
+  }
 }
