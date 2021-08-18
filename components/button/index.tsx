@@ -7,7 +7,7 @@ const Icon = ({
   className,
 }: {
   children: ReactNode;
-  className: string;
+  className?: string;
 }) => <button className={cs(classes.button, className)}>{children}</button>;
 
 export default Icon;
