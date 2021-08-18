@@ -10,16 +10,16 @@ const AppBar = () => (
       <Icon />
     </div>
     <div className={classes.menubar}>
-      <div className={cs(classes.menuItem, classes.item0001)}>
+      <div className={cs(classes.menuItem, classes.item0001, "clickable")}>
         <span className={classes.menuNumber}>0001</span>: About
       </div>
-      <div className={cs(classes.menuItem, classes.item0010)}>
+      <div className={cs(classes.menuItem, classes.item0010, "clickable")}>
         <span className={classes.menuNumber}>0010</span>: Experience
       </div>
-      <div className={cs(classes.menuItem, classes.item0011)}>
+      <div className={cs(classes.menuItem, classes.item0011, "clickable")}>
         <span className={classes.menuNumber}>0011</span>: Work
       </div>
-      <div className={cs(classes.menuItem, classes.item0100)}>
+      <div className={cs(classes.menuItem, classes.item0100, "clickable")}>
         <span className={classes.menuNumber}>0100</span>: Contact
       </div>
 

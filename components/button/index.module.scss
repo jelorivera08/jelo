@@ -10,6 +10,10 @@
   cursor: pointer;
 
   &:hover {
+    border-style: dashed;
+  }
+
+  &:active {
     background-color: $color-secondary;
   }
 

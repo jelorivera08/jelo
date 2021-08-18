@@ -21,3 +21,11 @@ a {
 #__next {
   height: 100%;
 }
+
+.clickable:hover {
+  border: 1px dashed #f1ecc3;
+}
+
+.clickable:active {
+  background-color: #57837b;
+}
