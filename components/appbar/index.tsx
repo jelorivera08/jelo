@@ -6,6 +6,7 @@ import Burger from "components/burger";
 import classes from "./index.module.scss";
 import { useMediaQuery } from "react-responsive";
 import { BREAKPOINTS } from "lib/constant";
+import Link from "next/link";
 
 const AppBar = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
@@ -41,7 +42,11 @@ const AppBar = () => {
         </div>
 
         <div className={cs(classes.menuItem, classes.resume)}>
-          <Button className={classes.button}>Resume</Button>
+          <Button className={classes.button}>
+            <Link href="/jelorivera.pdf">
+              <a target="_blank">Resume</a>
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
