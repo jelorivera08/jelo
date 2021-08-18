@@ -11,7 +11,7 @@ const Intro = () => (
       <h2 className={classes.name}>Jelo Rivera.</h2>
       <div className={classes.subtitle}>I tinker with everything web.</div>
       <div className={classes.body}>
-        {`I am a software engineer whose craft involves building beautiful, stable
+        {`I am a software engineer whose craft involves building beautiful, stable,
       and utilitarian digital platforms. Currently, I'm working on creating
       accessible, connection-centered digital products at `}
         <span className={cs(classes.company, "clickable")}>Scentre Group</span>.
