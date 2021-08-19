@@ -5,6 +5,7 @@ import SideBars from "components/sidebars";
 import Intro from "components/intro";
 import { useEffect, useState } from "react";
 import classes from "styles/home.module.scss";
+import About from "components/about";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,11 +19,12 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className={classes.home}>
+    <main className={classes.home}>
       <AppBar />
       <Intro />
+      <About />
       <SideBars />
-    </div>
+    </main>
   );
 };
 

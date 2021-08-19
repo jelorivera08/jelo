@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "components/icon";
 import Button from "components/button";
 import cs from "classnames";
@@ -7,49 +7,71 @@ import classes from "./index.module.scss";
 import { useMediaQuery } from "react-responsive";
 import { BREAKPOINTS } from "lib/constant";
 import Link from "next/link";
+import { useScrollDirection } from "react-use-scroll-direction";
+import { useEffect } from "react";
 
 const AppBar = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
+  const { isScrollingDown, isScrollingUp } = useScrollDirection();
+  const [wasScrollingDown, setWasScrollingDown] = useState(false);
+
+  useEffect(() => {
+    if (isScrollingDown && !wasScrollingDown) {
+      setWasScrollingDown(true);
+    }
+
+    if (isScrollingUp) {
+      setWasScrollingDown(false);
+    }
+  }, [isScrollingDown, wasScrollingDown, isScrollingUp]);
 
   if (isMobile) {
     return (
-      <div className={classes.container}>
-        <div className={classes.icon}>
-          <Icon />
+      <header
+        className={cs(classes.header, { [classes.hide]: wasScrollingDown })}
+      >
+        <div className={classes.container}>
+          <div className={classes.icon}>
+            <Icon />
+          </div>
+          <Burger />
         </div>
-        <Burger />
-      </div>
+      </header>
     );
   }
 
   return (
-    <div className={classes.container}>
-      <div className={classes.icon}>
-        <Icon />
-      </div>
-      <div className={classes.menubar}>
-        <div className={cs(classes.menuItem, classes.item0001, "clickable")}>
-          <span className={classes.menuNumber}>0001</span>: About
+    <header
+      className={cs(classes.header, { [classes.hide]: wasScrollingDown })}
+    >
+      <div className={classes.container}>
+        <div className={classes.icon}>
+          <Icon />
         </div>
-        <div className={cs(classes.menuItem, classes.item0010, "clickable")}>
-          <span className={classes.menuNumber}>0010</span>: Experience
-        </div>
-        <div className={cs(classes.menuItem, classes.item0011, "clickable")}>
-          <span className={classes.menuNumber}>0011</span>: Work
-        </div>
-        <div className={cs(classes.menuItem, classes.item0100, "clickable")}>
-          <span className={classes.menuNumber}>0100</span>: Contact
-        </div>
+        <div className={classes.menubar}>
+          <div className={cs(classes.menuItem, classes.item0001, "clickable")}>
+            <span className={classes.menuNumber}>0001</span>: About
+          </div>
+          <div className={cs(classes.menuItem, classes.item0010, "clickable")}>
+            <span className={classes.menuNumber}>0010</span>: Experience
+          </div>
+          <div className={cs(classes.menuItem, classes.item0011, "clickable")}>
+            <span className={classes.menuNumber}>0011</span>: Work
+          </div>
+          <div className={cs(classes.menuItem, classes.item0100, "clickable")}>
+            <span className={classes.menuNumber}>0100</span>: Contact
+          </div>
 
-        <div className={cs(classes.menuItem, classes.resume)}>
-          <Button className={classes.button}>
-            <Link href="/resume.pdf">
-              <a target="_blank">Resume</a>
-            </Link>
-          </Button>
+          <div className={cs(classes.menuItem, classes.resume)}>
+            <Button className={classes.button}>
+              <Link href="/resume.pdf">
+                <a target="_blank">Resume</a>
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,5 +1,13 @@
 @import "styles/variables";
 
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 84px;
+  top: 0;
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
 .container {
   color: $color-secondary;
   align-items: center;
@@ -12,6 +20,10 @@
   padding: 0.5rem;
   z-index: 10;
   animation: slideDown 0.5s ease-in forwards;
+}
+
+.hide {
+  top: -84px;
 }
 
 .menubar {

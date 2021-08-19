@@ -20,7 +20,6 @@ import { useMediaQuery } from "react-responsive";
 const SideBars = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
 
-  console.log(isMobile);
   if (isMobile) {
     return null;
   }

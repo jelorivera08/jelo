@@ -1,0 +1,98 @@
+@import "styles/variables";
+@import "styles/animations";
+
+.container {
+  color: $color-secondary;
+  justify-content: space-between;
+  font-family: "STIX Two Text", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+.content {
+  max-width: 1000px;
+  padding: 0 86px;
+  width: 100%;
+}
+
+.header {
+  font-size: 32px;
+  padding-bottom: 16px;
+  color: #fff;
+}
+.headerText {
+  margin-bottom: -8px;
+}
+
+.number {
+  color: $color-primary;
+}
+
+.body {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 0;
+  display: flex;
+}
+
+.text {
+  width: 60%;
+  margin-right: 24px;
+  line-height: 1.5;
+}
+
+.image {
+  width: 40%;
+  margin: auto;
+  position: relative;
+}
+
+.circle {
+  border-radius: 50%;
+  filter: grayscale(100%);
+  z-index: 5;
+
+  &:hover {
+    filter: sepia(50%);
+  }
+}
+
+.matrix {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  color: $matrix-green;
+  letter-spacing: 1px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.highlight {
+  color: $color-light;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.imageDecor {
+  position: absolute;
+  z-index: 1;
+  bottom: -8%;
+  right: -8%;
+  height: 330px;
+  width: 330px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+}
+
+.enlarge {
+  transform: scale(1.2) translateX(10px);
+  bottom: 0;
+  right: 0;
+  background-color: $color-light;
+}
