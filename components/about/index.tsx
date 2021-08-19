@@ -35,7 +35,7 @@ const About = () => {
           <div className={classes.matrix}>{matrix}</div>
         </div>
         <div className={classes.body}>
-          <div className={classes.text}>
+          <div className={cs(classes.text, { [classes.test]: wasInViewport })}>
             <p>
               Hi, I&apos;m Jelo and I am passionate about all things code. My
               first encounter with software was way back in{" "}

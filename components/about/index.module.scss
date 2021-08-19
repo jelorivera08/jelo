@@ -45,7 +45,14 @@
 .text {
   width: 60%;
   margin-right: 24px;
+  line-height: 0.3;
+  opacity: 0;
+  transition: line-height 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.test {
   line-height: 1.5;
+  opacity: 1;
 }
 
 .image {
