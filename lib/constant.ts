@@ -12,3 +12,5 @@ export const GOFLUENT = "https://www.gofluent.com/us-en/";
 export const VC = "https://www.virtualcontrol.com/";
 export const METROBANK = "https://metrobank.com.ph/home";
 export const SG = "https://www.scentregroup.com/home-page ";
+export const RANDOM_BINARY_STRING =
+  "101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010";

@@ -1,27 +1,32 @@
 import cs from "classnames";
-import { UNIVERSITY, GOFLUENT, VC, METROBANK, SG } from "lib/constant";
+import {
+  UNIVERSITY,
+  GOFLUENT,
+  VC,
+  METROBANK,
+  SG,
+  RANDOM_BINARY_STRING,
+} from "lib/constant";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from "./index.module.scss";
 import me from "public/me.png";
+import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
+import { useTheMatrix } from "lib/hooks/useTheMatrix";
 
 const About = () => {
-  const [matrix, setMatrix] = useState(
-    "101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010"
-  );
+  const matrix = useTheMatrix();
   const [isHoveringImage, setIsHoveringImage] = useState(false);
-
-  useEffect(() => {
-    const matrixInterval = setInterval(() => {
-      setMatrix(matrix => matrix.substring(1) + matrix.substring(0, 1));
-    }, 300);
-
-    return () => clearInterval(matrixInterval);
-  }, []);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const wasInViewport = useWasOnScreen(ref);
 
   return (
-    <section id="about" className={classes.container}>
+    <section
+      id="about"
+      ref={ref}
+      className={cs(classes.container, { [classes.show]: wasInViewport })}
+    >
       <div className={classes.content}>
         <div className={classes.header}>
           <div className={classes.headerText}>
@@ -76,6 +81,29 @@ const About = () => {
               digital platforms connecting consumers, retailers and the
               business.
             </p>
+
+            <div>
+              Here are some of the techonologies I have used to build my recent
+              projects.
+            </div>
+
+            <div className={classes.listContainer}>
+              <div className={classes.list}>
+                <ul>
+                  <li>React</li>
+                  <li>Javascript</li>
+                  <li>Typescript</li>
+                </ul>
+              </div>
+
+              <div className={classes.list}>
+                <ul>
+                  <li>Node JS</li>
+                  <li>Google Cloud Platform</li>
+                  <li>Next JS</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div
             className={classes.image}
