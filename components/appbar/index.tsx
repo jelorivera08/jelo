@@ -49,9 +49,13 @@ const AppBar = () => {
           <Icon />
         </div>
         <div className={classes.menubar}>
-          <div className={cs(classes.menuItem, classes.item0001, "clickable")}>
-            <span className={classes.menuNumber}>0001</span>: About
-          </div>
+          <Link passHref href="/#about">
+            <div
+              className={cs(classes.menuItem, classes.item0001, "clickable")}
+            >
+              <span className={classes.menuNumber}>0001</span>: About
+            </div>
+          </Link>
           <div className={cs(classes.menuItem, classes.item0010, "clickable")}>
             <span className={classes.menuNumber}>0010</span>: Experience
           </div>

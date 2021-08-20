@@ -14,12 +14,19 @@ import classes from "./index.module.scss";
 import me from "public/me.png";
 import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
 import { useTheMatrix } from "lib/hooks/useTheMatrix";
+import { AboutProps } from "types/about";
 
-const About = () => {
+const About = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const wasInViewport = useWasOnScreen(ref);
+
+  useEffect(() => {
+    if (asPath === "about") {
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [asPath]);
 
   return (
     <section

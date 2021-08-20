@@ -3,19 +3,16 @@
 
 .container {
   color: $color-secondary;
-  justify-content: space-between;
   font-family: "STIX Two Text", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   visibility: hidden;
   opacity: 0;
   transform: translateY(300px);
   transition: all 0.5s ease-in-out;
+  height: 100%;
 }
 
 .content {
+  height: 100%;
   max-width: 1000px;
   padding: 0 86px;
   width: 100%;
@@ -25,6 +22,7 @@
   font-size: 32px;
   padding-bottom: 16px;
   color: #fff;
+  padding-top: 24px;
 }
 .headerText {
   margin-bottom: -8px;
@@ -47,7 +45,7 @@
   margin-right: 24px;
   line-height: 0.3;
   opacity: 0;
-  transition: line-height 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: line-height 0.5s ease-in;
 }
 
 .test {

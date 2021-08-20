@@ -8,6 +8,8 @@ import classes from "./index.module.scss";
 const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClose = () => setIsOpen(false);
+
   return (
     <div className={classes.container}>
       <div className={classes.burger}>
@@ -16,9 +18,14 @@ const Burger = () => {
 
       <div className={cs(classes.overlay, { [classes.show]: isOpen })}>
         <div className={cs(classes.menubar)}>
-          <div className={cs(classes.menuItem, "clickable")}>
-            <div className={classes.itemNumber}>0001:</div> <div>About</div>
-          </div>
+          <Link passHref href="/#about">
+            <div
+              className={cs(classes.menuItem, "clickable")}
+              onClick={handleClose}
+            >
+              <div className={classes.itemNumber}>0001:</div> <div>About</div>
+            </div>
+          </Link>
           <div className={cs(classes.menuItem, "clickable")}>
             <div className={classes.itemNumber}>0010:</div>{" "}
             <div>Experience</div>
