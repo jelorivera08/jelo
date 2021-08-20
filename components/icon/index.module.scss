@@ -15,10 +15,10 @@
   align-items: center;
   height: 100%;
   font-size: 1.5rem;
-  color: $color-primary;
+  color: $color-light;
   font-family: "Sacramento", cursive;
-  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
-    0 0 40px $color-primary, 0 0 80px $color-primary;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px $color-light,
+    0 0 80px $color-light;
   cursor: pointer;
 
   transition: transform 0.2s ease-in;

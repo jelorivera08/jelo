@@ -30,7 +30,7 @@ const SideBars = () => {
         <div className={classes.topLineLeft} />
         <div className={classes.icon}>
           <FaGithubSquare
-            fill="#c9d8b6"
+            fill="#ccadbd"
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(GITHUB, "_blank")}
@@ -38,7 +38,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaInstagramSquare
-            fill="#c9d8b6"
+            fill="#ccadbd"
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(IG, "_blank")}
@@ -46,7 +46,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaTwitterSquare
-            fill="#c9d8b6"
+            fill="#ccadbd"
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(TWITTER, "_blank")}
@@ -54,7 +54,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaLinkedin
-            fill="#c9d8b6"
+            fill="#ccadbd"
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(LINKEDIN, "_blank")}
