@@ -42,7 +42,9 @@ const About = ({ asPath }: AboutProps) => {
           <div className={classes.matrix}>{matrix}</div>
         </div>
         <div className={classes.body}>
-          <div className={cs(classes.text, { [classes.test]: wasInViewport })}>
+          <div
+            className={cs(classes.text, { [classes.textShow]: wasInViewport })}
+          >
             <p>
               Hi, I&apos;m Jelo and I am passionate about all things code. My
               first encounter with software was way back in{" "}
@@ -96,19 +98,33 @@ const About = ({ asPath }: AboutProps) => {
 
             <div className={classes.listContainer}>
               <div className={classes.list}>
-                <ul>
-                  <li>React</li>
-                  <li>Javascript</li>
-                  <li>Typescript</li>
-                </ul>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>React</span>
+                </div>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>Javascript</span>
+                </div>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>Typescript</span>
+                </div>
               </div>
 
               <div className={classes.list}>
-                <ul>
-                  <li>Node JS</li>
-                  <li>Google Cloud Platform</li>
-                  <li>Next JS</li>
-                </ul>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>Node JS</span>
+                </div>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>Google Cloud Platform</span>
+                </div>
+                <div className={classes.listItem}>
+                  <div className={classes.bullet} />
+                  <span>GraphQL</span>
+                </div>
               </div>
             </div>
           </div>

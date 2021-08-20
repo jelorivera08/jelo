@@ -1,20 +1,10 @@
 import cs from "classnames";
-import {
-  UNIVERSITY,
-  GOFLUENT,
-  VC,
-  METROBANK,
-  SG,
-  RANDOM_BINARY_STRING,
-} from "lib/constant";
-import Link from "next/link";
-import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "./index.module.scss";
-import me from "public/me.png";
 import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
 import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
+import NavRail from "components/navrail";
 
 const Career = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
@@ -41,7 +31,9 @@ const Career = ({ asPath }: AboutProps) => {
           <div className={classes.matrix}>{matrix}</div>
         </div>
 
-        <div className={classes.body}>body</div>
+        <div className={classes.body}>
+          <NavRail />
+        </div>
       </div>
     </section>
   );

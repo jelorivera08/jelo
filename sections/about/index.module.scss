@@ -8,7 +8,8 @@
   opacity: 0;
   transform: translateY(300px);
   transition: all 0.5s ease-in-out;
-  height: 100%;
+  height: fit-content;
+  margin-bottom: 8rem;
 }
 
 .content {
@@ -49,7 +50,7 @@
   transition: line-height 0.5s ease-in;
 }
 
-.test {
+.textShow {
   line-height: 1.5;
   opacity: 1;
 }
@@ -121,9 +122,10 @@
 
 .list {
   width: 50%;
+  padding-top: 16px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: $screen-md) {
   .text {
     width: 100%;
     font-size: 16px;
@@ -155,4 +157,19 @@
     right: 0;
     background-color: $color-light;
   }
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  margin: 6px;
+  border: 1px solid $color-light;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
 }

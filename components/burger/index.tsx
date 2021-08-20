@@ -26,10 +26,12 @@ const Burger = () => {
               <div className={classes.itemNumber}>0001:</div> <div>About</div>
             </div>
           </Link>
-          <div className={cs(classes.menuItem, "clickable")}>
-            <div className={classes.itemNumber}>0010:</div>{" "}
-            <div>Experience</div>
-          </div>
+          <Link passHref href="/#career">
+            <div className={cs(classes.menuItem, "clickable")}>
+              <div className={classes.itemNumber}>0010:</div>{" "}
+              <div>Experience</div>
+            </div>
+          </Link>
           <div className={cs(classes.menuItem, "clickable")}>
             <div className={classes.itemNumber}>0011:</div> <div>Work</div>
           </div>

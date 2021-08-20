@@ -71,7 +71,7 @@
   animation: slideUp 0.5s ease-in 0.7s forwards;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: $screen-md) {
   .content {
     padding: 0 2rem;
     padding-top: 2rem;

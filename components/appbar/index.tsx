@@ -56,9 +56,14 @@ const AppBar = () => {
               <span className={classes.menuNumber}>0001</span>: About
             </div>
           </Link>
-          <div className={cs(classes.menuItem, classes.item0010, "clickable")}>
-            <span className={classes.menuNumber}>0010</span>: Experience
-          </div>
+
+          <Link passHref href="/#career">
+            <div
+              className={cs(classes.menuItem, classes.item0010, "clickable")}
+            >
+              <span className={classes.menuNumber}>0010</span>: Experience
+            </div>
+          </Link>
           <div className={cs(classes.menuItem, classes.item0011, "clickable")}>
             <span className={classes.menuNumber}>0011</span>: Work
           </div>
