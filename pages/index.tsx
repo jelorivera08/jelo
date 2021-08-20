@@ -7,7 +7,8 @@ import Intro from "components/intro";
 import { stripSpecialCharacters } from "lib/util";
 import { useEffect, useState } from "react";
 import classes from "styles/home.module.scss";
-import About from "components/about";
+import About from "sections/about";
+import Career from "sections/career";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       <AppBar />
       <Intro />
       <About asPath={asPath} />
+      <Career asPath={asPath} />
       <SideBars />
     </main>
   );
