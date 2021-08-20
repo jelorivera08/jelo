@@ -13,7 +13,7 @@ const Burger = () => {
   return (
     <div className={classes.container}>
       <div className={classes.burger}>
-        <Hamburger toggled={isOpen} toggle={setIsOpen} color="#f1ecc3" />
+        <Hamburger toggled={isOpen} toggle={setIsOpen} color="#ccadbd" />
       </div>
 
       <div className={cs(classes.overlay, { [classes.show]: isOpen })}>
