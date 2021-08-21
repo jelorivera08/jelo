@@ -92,7 +92,7 @@ const About = ({ asPath }: AboutProps) => {
             </p>
 
             <div>
-              Here are some of the techonologies I have used to build my recent
+              Here are some of the technologies I have used to build my recent
               projects.
             </div>
 
