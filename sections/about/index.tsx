@@ -80,7 +80,7 @@ const About = ({ asPath }: AboutProps) => {
                   <a target="_blank"> a start-up.</a>
                 </Link>
               </span>{" "}
-              Now, I am currently working at{" "}
+              Now, I am working at{" "}
               <span className={cs(classes.highlight, "clickable")}>
                 <Link href={SG}>
                   <a target="_blank"> Scentre Group</a>
