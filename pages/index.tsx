@@ -6,6 +6,7 @@ import SideBars from "components/sidebars";
 import Intro from "components/intro";
 import { stripSpecialCharacters } from "lib/util";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import classes from "styles/home.module.scss";
 import About from "sections/about";
 import Career from "sections/career";
