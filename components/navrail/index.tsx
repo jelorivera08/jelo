@@ -3,6 +3,8 @@ import { useState } from "react";
 import cs from "classnames";
 import { Option } from "types/career";
 import classes from "./index.module.scss";
+import Link from "next/link";
+import { GOFLUENT, METROBANK, SG, VC } from "lib/constant";
 
 const options = [
   {
@@ -12,7 +14,11 @@ const options = [
       <>
         <div className={classes.header}>
           <span>Full Stack Web Engineer</span>{" "}
-          <span className={classes.company}>@ Scentre Group</span>
+          <Link passHref href={SG}>
+            <a target="_blank">
+              <span className={classes.company}>@ Scentre Group</span>
+            </a>
+          </Link>
         </div>
 
         <div className={classes.date}>June 2020 - Present</div>
@@ -61,7 +67,11 @@ const options = [
       <>
         <div className={classes.header}>
           <span>Senior Front End Engineer</span>{" "}
-          <span className={classes.company}>@ Virtual Control</span>
+          <Link passHref href={VC}>
+            <a target="_blank">
+              <span className={classes.company}>@ Virtual Control</span>
+            </a>
+          </Link>
         </div>
 
         <div className={classes.date}>August 2019 - June 2020</div>
@@ -102,7 +112,11 @@ const options = [
       <>
         <div className={classes.header}>
           <span>Front End Engineer</span>{" "}
-          <span className={classes.company}>@ GoFluent</span>
+          <Link passHref href={GOFLUENT}>
+            <a target="_blank">
+              <span className={classes.company}>@ GoFluent</span>
+            </a>
+          </Link>
         </div>
 
         <div className={classes.date}>October 2017 - August 2019</div>
@@ -143,7 +157,11 @@ const options = [
       <>
         <div className={classes.header}>
           <span>Software Engineer</span>{" "}
-          <span className={classes.company}>@ Metrobank</span>
+          <Link passHref href={METROBANK}>
+            <a target="_blank">
+              <span className={classes.company}>@ Metrobank</span>
+            </a>
+          </Link>
         </div>
 
         <div className={classes.date}>April 2017 - October 2017</div>

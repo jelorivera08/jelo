@@ -97,6 +97,11 @@
 
 .company {
   color: $color-light;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .header {
