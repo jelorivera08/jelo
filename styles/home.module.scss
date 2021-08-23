@@ -2,5 +2,17 @@
 
 .home {
   background-color: $color-dark;
-  height: 100%;
+}
+
+.footer {
+  color: $color-light;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.text {
+  padding: 12px;
 }
