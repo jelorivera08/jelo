@@ -56,7 +56,6 @@ const AppBar = () => {
               <span className={classes.menuNumber}>0001</span>: About
             </div>
           </Link>
-
           <Link passHref href="/#career">
             <div
               className={cs(classes.menuItem, classes.item0010, "clickable")}
@@ -64,12 +63,21 @@ const AppBar = () => {
               <span className={classes.menuNumber}>0010</span>: Experience
             </div>
           </Link>
-          <div className={cs(classes.menuItem, classes.item0011, "clickable")}>
-            <span className={classes.menuNumber}>0011</span>: Work
-          </div>
-          <div className={cs(classes.menuItem, classes.item0100, "clickable")}>
-            <span className={classes.menuNumber}>0100</span>: Contact
-          </div>
+          <Link passHref href="/#work">
+            <div
+              className={cs(classes.menuItem, classes.item0011, "clickable")}
+            >
+              <span className={classes.menuNumber}>0011</span>: Work
+            </div>
+          </Link>
+
+          <Link passHref href="/#contact">
+            <div
+              className={cs(classes.menuItem, classes.item0100, "clickable")}
+            >
+              <span className={classes.menuNumber}>0100</span>: Contact
+            </div>
+          </Link>
 
           <div className={cs(classes.menuItem, classes.resume)}>
             <Button className={classes.button}>

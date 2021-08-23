@@ -8,7 +8,8 @@
   opacity: 0;
   transform: translateY(300px);
   transition: all 0.5s ease-in-out;
-  height: 100%;
+  padding-bottom: 24px;
+  height: fit-content;
 }
 
 .content {
@@ -16,9 +17,7 @@
   max-width: 1000px;
   padding: 0 86px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: auto;
 }
 
 .header {
@@ -41,6 +40,14 @@
   letter-spacing: 1px;
   padding: 12px 0;
   display: flex;
+  border: 1px dashed #fff;
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .matrix {
@@ -59,14 +66,42 @@
   opacity: 1;
 }
 
-@media screen and (max-width: $screen-md) {
-  .body {
-    display: block;
+.comingSoon {
+  position: absolute;
+  left: -20%;
+  white-space: nowrap;
+  animation: leftToRight 4s linear infinite;
+  color: $color-warning;
+  font-size: 24px;
+}
+
+.underMaintenance {
+  top: 12px;
+  position: absolute;
+  opacity: 0;
+  animation: flashing 2s linear infinite;
+  color: $color-warning;
+  font-size: 24px;
+}
+
+@keyframes flashing {
+  50% {
+    opacity: 1;
   }
 
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes leftToRight {
+  100% {
+    left: 100%;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
   .content {
     padding: 0 2rem;
-    margin: auto;
-    display: block;
   }
 }

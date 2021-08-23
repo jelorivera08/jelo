@@ -27,17 +27,30 @@ const Burger = () => {
             </div>
           </Link>
           <Link passHref href="/#career">
-            <div className={cs(classes.menuItem, "clickable")}>
+            <div
+              className={cs(classes.menuItem, "clickable")}
+              onClick={handleClose}
+            >
               <div className={classes.itemNumber}>0010:</div>{" "}
               <div>Experience</div>
             </div>
           </Link>
-          <div className={cs(classes.menuItem, "clickable")}>
-            <div className={classes.itemNumber}>0011:</div> <div>Work</div>
-          </div>
-          <div className={cs(classes.menuItem, "clickable")}>
-            <div className={classes.itemNumber}>0100:</div> <div>Contact</div>
-          </div>
+          <Link passHref href="/#work">
+            <div
+              className={cs(classes.menuItem, "clickable")}
+              onClick={handleClose}
+            >
+              <div className={classes.itemNumber}>0011:</div> <div>Work</div>
+            </div>
+          </Link>
+          <Link passHref href="/#contact">
+            <div
+              className={cs(classes.menuItem, "clickable")}
+              onClick={handleClose}
+            >
+              <div className={classes.itemNumber}>0100:</div> <div>Contact</div>
+            </div>
+          </Link>
 
           <div className={cs(classes.menuItem)}>
             <Button className={classes.button}>

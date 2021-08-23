@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import classes from "styles/home.module.scss";
 import About from "sections/about";
+import Work from "sections/work";
 import Career from "sections/career";
 
 const Home: NextPage = () => {
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
       <Intro />
       <About asPath={asPath} />
       <Career asPath={asPath} />
+      <Work asPath={asPath} />
       <SideBars />
     </main>
   );
