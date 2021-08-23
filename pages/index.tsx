@@ -11,6 +11,7 @@ import classes from "styles/home.module.scss";
 import About from "sections/about";
 import Work from "sections/work";
 import Career from "sections/career";
+import Contact from "sections/contact";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
       <About asPath={asPath} />
       <Career asPath={asPath} />
       <Work asPath={asPath} />
+      <Contact />
       <SideBars />
     </main>
   );
