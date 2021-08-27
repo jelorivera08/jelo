@@ -12,10 +12,9 @@
 .circle {
   height: 5rem;
   width: 5rem;
-  border: 0.125rem solid $color-primary;
+  border: 0.125rem solid $color-light;
   border-radius: 10rem;
-  animation: flicker-box 2s ease-in-out forwards,
-    fadeOut 2s ease-in-out forwards, enlarge 2s ease-in-out forwards;
+  animation: fadeOut 4s ease-in-out forwards;
 }
 
 .icon {
@@ -24,8 +23,20 @@
   align-items: center;
   height: 100%;
   font-size: 2rem;
-  color: $color-primary;
+  color: $color-light;
   font-family: "Sacramento", cursive;
-  animation: flicker-text 2s ease-in-out forwards,
-    fadeOut 2s ease-in-out forwards, enlarge 2s ease-in-out forwards;
+  animation: spin 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite,
+    fadeOut 4s ease-in-out forwards;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
 }
