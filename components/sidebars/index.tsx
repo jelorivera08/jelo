@@ -3,6 +3,7 @@ import {
   GITHUB,
   IG,
   TWITTER,
+  MEDIUM,
   LINKEDIN,
   BREAKPOINTS,
 } from "lib/constant";
@@ -12,6 +13,7 @@ import {
   FaInstagramSquare,
   FaTwitterSquare,
   FaLinkedin,
+  FaMedium,
 } from "react-icons/fa";
 import classes from "./index.module.scss";
 import cs from "classnames";
@@ -36,6 +38,15 @@ const SideBars = () => {
             onClick={() => window.open(GITHUB, "_blank")}
           />
         </div>
+        <div className={classes.icon}>
+          <FaMedium
+            fill="#ccadbd"
+            className="clickable"
+            fontSize="20px"
+            onClick={() => window.open(MEDIUM, "_blank")}
+          />
+        </div>
+
         <div className={classes.icon}>
           <FaInstagramSquare
             fill="#ccadbd"

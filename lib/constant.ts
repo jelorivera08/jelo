@@ -6,7 +6,9 @@ export const LINKEDIN = "https://www.linkedin.com/in/jerald-rivera-2055b8130/";
 export const BREAKPOINTS = {
   MOBILE: "(max-width: 840px)",
 };
-
+export const MEDIUM = "https://medium.com/@jelorivera08";
+export const MEDIUM_ARTICLE =
+  "https://javascript.plainenglish.io/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274";
 export const UNIVERSITY = "https://www.ust.edu.ph/";
 export const GOFLUENT = "https://www.gofluent.com/us-en/";
 export const VC = "https://www.virtualcontrol.com/";

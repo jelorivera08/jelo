@@ -4,7 +4,8 @@ import classes from "./index.module.scss";
 import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
 import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
-import NavRail from "components/navrail";
+import ComingSoon from "components/coming-soon";
+import Craft from "components/craft";
 
 const Work = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
@@ -32,11 +33,8 @@ const Work = ({ asPath }: AboutProps) => {
         </div>
 
         <div className={classes.body}>
-          <div className={classes.underMaintenance}>
-            🛠️ Under Maintenance 🛠️
-          </div>
-
-          <div className={classes.comingSoon}>Coming Soon</div>
+          <Craft />
+          <ComingSoon />
         </div>
       </div>
     </section>

@@ -1,0 +1,149 @@
+@import "styles/variables";
+@import "styles/animations";
+
+.container {
+  display: flex;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.imageContainer {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.image {
+  filter: brightness(50%) sepia(100%) blur(2px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover {
+    filter: brightness(100%) sepia(0%) blur(0);
+  }
+}
+
+.info {
+  width: 50%;
+  text-align: right;
+  justify-content: space-between;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+
+  height: 120px;
+}
+
+.header {
+  font-size: 16px;
+  color: $color-light;
+  padding: 6px 0;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 12px;
+  cursor: pointer;
+
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover {
+    color: $color-light;
+  }
+}
+
+.bodyContent {
+  position: absolute;
+  width: 120%;
+  padding: 24px;
+  filter: drop-shadow(-4px 4px 6px $color-dark);
+  right: 0;
+  background-color: $color-secondary;
+  text-align: right;
+  font-size: 14px;
+  max-height: 120px;
+}
+
+.footer {
+  padding: 12px 0;
+  color: $color-primary;
+  font-size: 14px;
+}
+
+.footerItem {
+  margin-left: 12px;
+}
+
+.linkIcon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 360px;
+    position: relative;
+  }
+
+  .image {
+    height: 100%;
+  }
+
+  .info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+  }
+
+  .bodyContent {
+    background-color: unset;
+    padding: 0;
+    position: unset;
+    width: inherit;
+    text-align: left;
+    font-size: 16px;
+    max-height: unset;
+  }
+
+  .header {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+  }
+
+  .footerItem {
+    margin-left: 0;
+    margin-right: 12px;
+    color: #fff;
+  }
+
+  .subtitle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: left;
+  }
+
+  .links {
+    width: 100%;
+    text-align: left;
+  }
+}
