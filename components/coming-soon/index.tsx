@@ -1,12 +1,24 @@
-import React, { ReactNode } from "react";
+import cs from "classnames";
+import useTheme from "lib/context/theme-provider";
+import React from "react";
 import classes from "./index.module.scss";
 
-const ComingSoon = () => (
-  <div className={classes.body}>
-    <div className={classes.underMaintenance}>🛠️ Under Maintenance 🛠️</div>
+const ComingSoon = () => {
+  const { isLight } = useTheme();
 
-    <div className={classes.comingSoon}>Coming Soon</div>
-  </div>
-);
+  return (
+    <div className={cs(classes.body, { [classes.light]: isLight })}>
+      <div
+        className={cs(classes.underMaintenance, { [classes.light]: isLight })}
+      >
+        🛠️ Under Maintenance 🛠️
+      </div>
+
+      <div className={cs(classes.comingSoon, { [classes.light]: isLight })}>
+        Coming Soon
+      </div>
+    </div>
+  );
+};
 
 export default ComingSoon;

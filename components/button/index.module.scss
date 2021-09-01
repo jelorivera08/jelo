@@ -19,3 +19,12 @@
 
   transition: background-color 0.2s ease-in-out;
 }
+
+.button.light {
+  border: 1px solid $light-mode-color-light;
+  color: $light-mode-color-light;
+
+  &:active {
+    background-color: $light-mode-color-secondary;
+  }
+}

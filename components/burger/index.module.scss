@@ -40,9 +40,14 @@
 
 .menubar {
   width: 300px;
-  color: $color-light;
   padding: 140px 40px;
   background-color: $color-dark;
+  color: $color-light;
+}
+
+.menubar.light {
+  background-color: $light-mode-color-dark;
+  color: $light-mode-color-light;
 }
 
 .menuItem {
@@ -54,7 +59,15 @@
   letter-spacing: 2px;
 }
 
+.menuItem.light {
+  color: $light-mode-color-light;
+}
+
 .itemNumber {
   color: $color-primary;
   padding-bottom: 4px;
+}
+
+.itemNumber.light {
+  color: $light-mode-color-primary;
 }

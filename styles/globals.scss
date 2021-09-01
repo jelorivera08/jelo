@@ -1,3 +1,5 @@
+@import "styles/variables";
+
 html,
 body {
   padding: 0;
@@ -23,10 +25,19 @@ a {
 }
 
 .clickable:hover {
-  border: 1px dashed #f1ecc3;
+  border: 1px dashed $color-secondary;
 }
 
 .clickable:active {
-  background-color: #35957f;
-  border: 1px dashed #f1ecc3;
+  background-color: $matrix-green;
+  border: 1px dashed $color-secondary;
+}
+
+.clickable.light:hover {
+  border: 1px dashed $light-mode-color-secondary;
+}
+
+.clickable.light:active {
+  background-color: $matrix-green;
+  border: 1px dashed $light-mode-color-secondary;
 }

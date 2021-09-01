@@ -15,12 +15,14 @@ import me from "public/me.png";
 import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
 import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
+import useTheme from "lib/context/theme-provider";
 
 const About = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const wasInViewport = useWasOnScreen(ref);
+  const { isLight } = useTheme();
 
   useEffect(() => {
     if (asPath === "about") {
@@ -32,12 +34,20 @@ const About = ({ asPath }: AboutProps) => {
     <section
       id="about"
       ref={ref}
-      className={cs(classes.container, { [classes.show]: wasInViewport })}
+      className={cs(
+        classes.container,
+        { [classes.show]: wasInViewport },
+        { [classes.light]: isLight }
+      )}
     >
       <div className={classes.content}>
         <div className={classes.header}>
-          <div className={classes.headerText}>
-            <span className={classes.number}> 0001: </span>About me
+          <div className={cs(classes.headerText, { [classes.light]: isLight })}>
+            <span className={cs(classes.number, { [classes.light]: isLight })}>
+              {" "}
+              0001:{" "}
+            </span>
+            About me
           </div>
           <div className={classes.matrix}>{matrix}</div>
         </div>
@@ -45,10 +55,18 @@ const About = ({ asPath }: AboutProps) => {
           <div
             className={cs(classes.text, { [classes.textShow]: wasInViewport })}
           >
-            <p>
+            <p className={cs({ [classes.light]: isLight })}>
               Hi, I&apos;m Jelo and I am passionate about all things code. My
               first encounter with software was way back in{" "}
-              <span className={cs(classes.highlight, "clickable")}>
+              <span
+                className={cs(
+                  classes.highlight,
+                  {
+                    [classes.light]: isLight,
+                  },
+                  "clickable"
+                )}
+              >
                 <Link href={UNIVERSITY}>
                   <a target="_blank">my University</a>
                 </Link>
@@ -58,15 +76,27 @@ const About = ({ asPath }: AboutProps) => {
               engineering.
             </p>
 
-            <p>
+            <p className={cs({ [classes.light]: isLight })}>
               Nowadays, I&apos;ve had the pleasure of working at
-              <span className={cs(classes.highlight, "clickable")}>
+              <span
+                className={cs(classes.highlight, "clickable", {
+                  [classes.light]: isLight,
+                })}
+              >
                 <Link href={METROBANK}>
                   <a target="_blank"> a huge banking corporation</a>
                 </Link>
               </span>
               ,
-              <span className={cs(classes.highlight, "clickable")}>
+              <span
+                className={cs(
+                  classes.highlight,
+                  {
+                    [classes.light]: isLight,
+                  },
+                  "clickable"
+                )}
+              >
                 <Link href={GOFLUENT}>
                   <a target="_blank">
                     {" "}
@@ -75,13 +105,29 @@ const About = ({ asPath }: AboutProps) => {
                 </Link>
               </span>
               , and
-              <span className={cs(classes.highlight, "clickable")}>
+              <span
+                className={cs(
+                  classes.highlight,
+                  {
+                    [classes.light]: isLight,
+                  },
+                  "clickable"
+                )}
+              >
                 <Link href={VC}>
                   <a target="_blank"> a start-up.</a>
                 </Link>
               </span>{" "}
               Now, I am working at{" "}
-              <span className={cs(classes.highlight, "clickable")}>
+              <span
+                className={cs(
+                  classes.highlight,
+                  {
+                    [classes.light]: isLight,
+                  },
+                  "clickable"
+                )}
+              >
                 <Link href={SG}>
                   <a target="_blank"> Scentre Group</a>
                 </Link>
@@ -91,7 +137,7 @@ const About = ({ asPath }: AboutProps) => {
               business.
             </p>
 
-            <div>
+            <div className={cs({ [classes.light]: isLight })}>
               Here are some of the technologies I have used to build my recent
               projects.
             </div>
@@ -99,31 +145,55 @@ const About = ({ asPath }: AboutProps) => {
             <div className={classes.listContainer}>
               <div className={classes.list}>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>React</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    React
+                  </span>
                 </div>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>Javascript</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    Javascript
+                  </span>
                 </div>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>Typescript</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    Typescript
+                  </span>
                 </div>
               </div>
 
               <div className={classes.list}>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>Node JS</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    Node JS
+                  </span>
                 </div>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>Google Cloud Platform</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    Google Cloud Platform
+                  </span>
                 </div>
                 <div className={classes.listItem}>
-                  <div className={classes.bullet} />
-                  <span>GraphQL</span>
+                  <div
+                    className={cs(classes.bullet, { [classes.light]: isLight })}
+                  />
+                  <span className={cs({ [classes.light]: isLight })}>
+                    GraphQL
+                  </span>
                 </div>
               </div>
             </div>
@@ -135,9 +205,13 @@ const About = ({ asPath }: AboutProps) => {
           >
             <Image src={me} alt="jelo" className={classes.circle} />
             <div
-              className={cs(classes.imageDecor, {
-                [classes.enlarge]: isHoveringImage,
-              })}
+              className={cs(
+                classes.imageDecor,
+                { [classes.light]: isLight },
+                {
+                  [classes.enlarge]: isHoveringImage,
+                }
+              )}
             />
           </div>
         </div>

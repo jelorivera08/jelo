@@ -17,8 +17,8 @@
   font-size: 1.5rem;
   color: $color-light;
   font-family: "Sacramento", cursive;
-  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px $color-light,
-    0 0 80px $color-light;
+  text-shadow: 0 0 4px $off-white, 0 0 11px $off-white, 0 0 19px $off-white,
+    0 0 40px $color-light, 0 0 80px $color-light;
   cursor: pointer;
 
   transition: transform 0.2s ease-in;
@@ -26,6 +26,12 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.icon.light {
+  color: $light-mode-color-light;
+  text-shadow: 0 0 4px $off-white, 0 0 11px $off-white, 0 0 19px $off-white,
+    0 0 40px $light-mode-color-light, 0 0 80px $light-mode-color-light;
 }
 
 @media screen and (max-width: $screen-md) {

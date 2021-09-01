@@ -6,11 +6,13 @@ import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
 import ComingSoon from "components/coming-soon";
 import Craft from "components/craft";
+import useTheme from "lib/context/theme-provider";
 
 const Work = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
   const ref = useRef<HTMLDivElement | null>(null);
   const wasInViewport = useWasOnScreen(ref);
+  const { isLight } = useTheme();
 
   useEffect(() => {
     if (asPath === "work") {
@@ -22,12 +24,20 @@ const Work = ({ asPath }: AboutProps) => {
     <section
       id="work"
       ref={ref}
-      className={cs(classes.container, { [classes.show]: wasInViewport })}
+      className={cs(
+        classes.container,
+        { [classes.light]: isLight },
+        { [classes.show]: wasInViewport }
+      )}
     >
       <div className={classes.content}>
         <div className={classes.header}>
-          <div className={classes.headerText}>
-            <span className={classes.number}> 0011: </span>My craft
+          <div className={cs(classes.headerText, { [classes.light]: isLight })}>
+            <span className={cs(classes.number, { [classes.light]: isLight })}>
+              {" "}
+              0011:{" "}
+            </span>
+            My craft
           </div>
           <div className={classes.matrix}>{matrix}</div>
         </div>

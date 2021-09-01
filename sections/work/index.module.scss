@@ -12,6 +12,10 @@
   height: fit-content;
 }
 
+.container.light {
+  color: $light-mode-color-secondary;
+}
+
 .content {
   height: 100%;
   max-width: 1000px;
@@ -24,19 +28,28 @@
 .header {
   font-size: 32px;
   padding-bottom: 16px;
-  color: #fff;
+  color: $off-white;
   padding-top: 24px;
 }
+
 .headerText {
   margin-bottom: -8px;
+}
+
+.headerText.light {
+  color: $light-mode-color-dark;
 }
 
 .number {
   color: $color-primary;
 }
 
+.number.light {
+  color: $light-mode-color-primary;
+}
+
 .body {
-  color: #fff;
+  color: $off-white;
   font-size: 18px;
   letter-spacing: 1px;
   padding: 12px 0;

@@ -18,9 +18,11 @@ import {
 import classes from "./index.module.scss";
 import cs from "classnames";
 import { useMediaQuery } from "react-responsive";
+import useTheme from "lib/context/theme-provider";
 
 const SideBars = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
+  const { isLight } = useTheme();
 
   if (isMobile) {
     return null;
@@ -29,10 +31,14 @@ const SideBars = () => {
   return (
     <>
       <div className={classes.left}>
-        <div className={classes.topLineLeft} />
+        <div
+          className={cs(classes.topLineLeft, {
+            [classes.light]: isLight,
+          })}
+        />
         <div className={classes.icon}>
           <FaGithubSquare
-            fill="#ccadbd"
+            fill={isLight ? "#015cc5" : "#ccadbd"}
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(GITHUB, "_blank")}
@@ -40,7 +46,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaMedium
-            fill="#ccadbd"
+            fill={isLight ? "#015cc5" : "#ccadbd"}
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(MEDIUM, "_blank")}
@@ -49,7 +55,7 @@ const SideBars = () => {
 
         <div className={classes.icon}>
           <FaInstagramSquare
-            fill="#ccadbd"
+            fill={isLight ? "#015cc5" : "#ccadbd"}
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(IG, "_blank")}
@@ -57,7 +63,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaTwitterSquare
-            fill="#ccadbd"
+            fill={isLight ? "#015cc5" : "#ccadbd"}
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(TWITTER, "_blank")}
@@ -65,7 +71,7 @@ const SideBars = () => {
         </div>
         <div className={classes.icon}>
           <FaLinkedin
-            fill="#ccadbd"
+            fill={isLight ? "#015cc5" : "#ccadbd"}
             className="clickable"
             fontSize="20px"
             onClick={() => window.open(LINKEDIN, "_blank")}
@@ -73,8 +79,16 @@ const SideBars = () => {
         </div>
       </div>
       <div className={classes.right}>
-        <div className={classes.topLineRight} />
-        <div className={cs(classes.text, "clickable")}>
+        <div
+          className={cs(classes.topLineRight, {
+            [classes.light]: isLight,
+          })}
+        />
+        <div
+          className={cs(classes.text, "clickable", {
+            [classes.light]: isLight,
+          })}
+        >
           <a href={`mailto:${EMAIL}`}>jelorivera08@gmail.com</a>
         </div>
       </div>

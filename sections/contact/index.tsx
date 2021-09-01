@@ -6,10 +6,12 @@ import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
 import Button from "components/button";
 import { EMAIL } from "lib/constant";
+import useTheme from "lib/context/theme-provider";
 
 const Contact = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
   const ref = useRef<HTMLDivElement | null>(null);
+  const { isLight } = useTheme();
   const wasInViewport = useWasOnScreen(ref);
 
   useEffect(() => {
@@ -22,17 +24,25 @@ const Contact = ({ asPath }: AboutProps) => {
     <section
       id="contact"
       ref={ref}
-      className={cs(classes.container, { [classes.show]: wasInViewport })}
+      className={cs(
+        classes.container,
+        { [classes.light]: isLight },
+        { [classes.show]: wasInViewport }
+      )}
     >
       <div className={classes.content}>
-        <div className={classes.header}>
+        <div className={cs(classes.header, { [classes.light]: isLight })}>
           <div className={classes.headerText}>
-            <span className={classes.number}> 0100: </span>Finally,
+            <span className={cs(classes.number, { [classes.light]: isLight })}>
+              {" "}
+              0100:{" "}
+            </span>
+            Finally,
           </div>
           <div className={classes.matrix}>{matrix}</div>
         </div>
 
-        <div className={classes.body}>
+        <div className={cs(classes.body, { [classes.light]: isLight })}>
           <div className={classes.subtitle}>Ping me up!</div>
 
           <div className={classes.text}>

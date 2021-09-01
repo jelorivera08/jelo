@@ -15,12 +15,15 @@ import Contact from "sections/contact";
 import Link from "next/link";
 import { GITHUB } from "lib/constant";
 import Head from "components/head";
-import { FaGithub, FaGithubAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import classNames from "classnames";
+import useTheme from "lib/context/theme-provider";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const asPath = stripSpecialCharacters(router.asPath);
+  const { isLight } = useTheme();
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 3000);
@@ -33,7 +36,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head />
-      <main className={classes.home}>
+      <main className={classNames(classes.home, { [classes.light]: isLight })}>
         <AppBar />
         <Intro />
         <About asPath={asPath} />
@@ -42,20 +45,29 @@ const Home: NextPage = () => {
         <Contact asPath={asPath} />
         <SideBars />
       </main>
-      <footer className={classes.footer}>
+      <footer
+        className={cs(classes.footer, {
+          [classes.light]: isLight,
+        })}
+      >
         <FaGithub
-          fill="#ccadbd"
+          fill={isLight ? "#015cc5" : "#ccadbd"}
           fontSize="20px"
           onClick={() => window.open(GITHUB, "_blank")}
         />
 
         <Link href={GITHUB}>
-          <a className={cs("clickable", classes.text)} target="_blank">
+          <a
+            className={cs("clickable", classes.text, {
+              [classes.light]: isLight,
+            })}
+            target="_blank"
+          >
             Designed & Built by Jelo Rivera
           </a>
         </Link>
         <FaGithub
-          fill="#ccadbd"
+          fill={isLight ? "#015cc5" : "#ccadbd"}
           fontSize="20px"
           onClick={() => window.open(GITHUB, "_blank")}
         />

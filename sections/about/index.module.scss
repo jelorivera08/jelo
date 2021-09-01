@@ -13,6 +13,14 @@
   height: fit-content;
 }
 
+.container.light {
+  color: $light-mode-color-secondary;
+}
+
+p.light {
+  color: $light-mode-color-dark;
+}
+
 .content {
   height: 100%;
   max-width: 1000px;
@@ -24,19 +32,28 @@
 .header {
   font-size: 32px;
   padding-bottom: 16px;
-  color: #fff;
+  color: $off-white;
   padding-top: 24px;
 }
+
 .headerText {
   margin-bottom: -8px;
+}
+
+.headerText.light {
+  color: $light-mode-color-dark;
 }
 
 .number {
   color: $color-primary;
 }
 
+.number.light {
+  color: $light-mode-color-primary;
+}
+
 .body {
-  color: #fff;
+  color: $off-white;
   font-size: 18px;
   letter-spacing: 1px;
   padding: 12px 0;
@@ -49,6 +66,10 @@
   line-height: 0.3;
   opacity: 0;
   transition: line-height 0.5s ease-in;
+}
+
+.light {
+  color: $light-mode-color-dark;
 }
 
 .textShow {
@@ -91,6 +112,10 @@
   }
 }
 
+.highlight.light {
+  color: $light-mode-color-light;
+}
+
 .imageDecor {
   position: absolute;
   z-index: 1;
@@ -103,11 +128,19 @@
   transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
 }
 
+.imageDecor.light {
+  background-color: $light-mode-color-primary;
+}
+
 .enlarge {
   transform: scale(1.2) translateX(10px);
   bottom: 0;
   right: 0;
   background-color: $color-light;
+}
+
+.enlarge.light {
+  background-color: $light-mode-color-light;
 }
 
 .show {
@@ -156,7 +189,6 @@
     transform: scale(1.2) translateX(-10px) translateY(-20px);
     bottom: 0;
     right: 0;
-    background-color: $color-light;
   }
 }
 
@@ -167,6 +199,10 @@
   border: 1px solid $color-light;
   border-radius: 50%;
   margin-right: 12px;
+}
+
+.bullet.light {
+  border: 1px solid $light-mode-color-light;
 }
 
 .listItem {

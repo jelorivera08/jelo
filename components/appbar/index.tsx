@@ -9,11 +9,15 @@ import { BREAKPOINTS } from "lib/constant";
 import Link from "next/link";
 import { useScrollDirection } from "react-use-scroll-direction";
 import { useEffect } from "react";
+import useTheme from "lib/context/theme-provider";
+import { ImSun } from "react-icons/im";
+import { FaMoon } from "react-icons/fa";
 
 const AppBar = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
   const { isScrollingDown, isScrollingUp } = useScrollDirection();
   const [wasScrollingDown, setWasScrollingDown] = useState(false);
+  const { toggleTheme, isLight } = useTheme();
 
   useEffect(() => {
     if (isScrollingDown && !wasScrollingDown) {
@@ -30,11 +34,35 @@ const AppBar = () => {
       <header
         className={cs(classes.header, { [classes.hide]: wasScrollingDown })}
       >
-        <div className={classes.container}>
+        <div className={cs(classes.container, { [classes.light]: isLight })}>
           <div className={classes.icon}>
             <Icon />
           </div>
-          <Burger />
+          <div className={classes.burgetAndDM}>
+            <div
+              className={cs(classes.darkModeContainer, {
+                [classes.light]: isLight,
+              })}
+              onClick={toggleTheme}
+            >
+              <FaMoon
+                size={20}
+                fill="#1d1d1d"
+                className={cs(classes.moon, {
+                  [classes.isSelectedMode]: isLight,
+                })}
+              />
+              <ImSun
+                size={20}
+                fill="#f9d71c"
+                className={cs(classes.sun, {
+                  [classes.isSelectedMode]: !isLight,
+                })}
+              />
+            </div>
+
+            <Burger />
+          </div>
         </div>
       </header>
     );
@@ -44,42 +72,110 @@ const AppBar = () => {
     <header
       className={cs(classes.header, { [classes.hide]: wasScrollingDown })}
     >
-      <div className={classes.container}>
+      <div className={cs(classes.container, { [classes.light]: isLight })}>
         <div className={classes.icon}>
           <Icon />
         </div>
         <div className={classes.menubar}>
+          <div
+            className={cs(classes.darkModeContainer, {
+              [classes.light]: isLight,
+            })}
+            onClick={toggleTheme}
+          >
+            <FaMoon
+              size={20}
+              fill="#1d1d1d"
+              className={cs(classes.moon, {
+                [classes.isSelectedMode]: isLight,
+              })}
+            />
+            <ImSun
+              size={20}
+              fill="#f9d71c"
+              className={cs(classes.sun, {
+                [classes.isSelectedMode]: !isLight,
+              })}
+            />
+          </div>
+
           <Link passHref href="/#about">
             <div
-              className={cs(classes.menuItem, classes.item0001, "clickable")}
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                classes.item0001,
+                "clickable"
+              )}
             >
-              <span className={classes.menuNumber}>0001</span>: About
+              <span
+                className={cs(classes.menuNumber, { [classes.light]: isLight })}
+              >
+                0001
+              </span>
+              : About
             </div>
           </Link>
           <Link passHref href="/#career">
             <div
-              className={cs(classes.menuItem, classes.item0010, "clickable")}
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                classes.item0010,
+                "clickable"
+              )}
             >
-              <span className={classes.menuNumber}>0010</span>: Experience
+              <span
+                className={cs(classes.menuNumber, { [classes.light]: isLight })}
+              >
+                0010
+              </span>
+              : Experience
             </div>
           </Link>
           <Link passHref href="/#work">
             <div
-              className={cs(classes.menuItem, classes.item0011, "clickable")}
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                classes.item0011,
+                "clickable"
+              )}
             >
-              <span className={classes.menuNumber}>0011</span>: Work
+              <span
+                className={cs(classes.menuNumber, { [classes.light]: isLight })}
+              >
+                0011
+              </span>
+              : Work
             </div>
           </Link>
 
           <Link passHref href="/#contact">
             <div
-              className={cs(classes.menuItem, classes.item0100, "clickable")}
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                classes.item0100,
+                "clickable"
+              )}
             >
-              <span className={classes.menuNumber}>0100</span>: Contact
+              <span
+                className={cs(classes.menuNumber, { [classes.light]: isLight })}
+              >
+                0100
+              </span>
+              : Contact
             </div>
           </Link>
 
-          <div className={cs(classes.menuItem, classes.resume)}>
+          <div
+            className={cs(
+              classes.menuItem,
+              { [classes.light]: isLight },
+              classes.resume
+            )}
+          >
             <Button className={classes.button}>
               <Link href="/resume.pdf">
                 <a target="_blank">Resume</a>

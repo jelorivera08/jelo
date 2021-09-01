@@ -37,15 +37,32 @@
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
+.option.light {
+  color: $light-mode-color-dark;
+
+  &:hover {
+    border-left: 5px solid $light-mode-color-light;
+  }
+}
+
 .selected {
   border-left: 1px solid $color-light;
   color: $color-light;
+}
+
+.selected.light {
+  border-left: 1px solid $light-mode-color-light;
+  color: $light-mode-color-light;
 }
 
 .date {
   font-size: 14px;
   color: $color-secondary;
   margin-top: 4px;
+}
+
+.date.light {
+  color: $light-mode-color-secondary;
 }
 
 .body {
@@ -61,6 +78,10 @@
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.body.light {
+  color: $light-mode-color-dark;
 }
 
 .optionValueAnimation {
@@ -85,6 +106,10 @@
   border-radius: 50%;
 }
 
+.bullet.light {
+  border: 1px solid $light-mode-color-light;
+}
+
 .content {
   width: 100%;
 }
@@ -102,6 +127,10 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+.company.light {
+  color: $light-mode-color-light;
 }
 
 .header {
@@ -146,9 +175,21 @@
     transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 
+  .option.light {
+    &:hover {
+      border-left: unset;
+      border-top: 5px solid $light-mode-color-light;
+    }
+  }
+
   .selected {
     border-left: unset;
     border-top: 1px solid $color-light;
     color: $color-light;
+  }
+
+  .selected.light {
+    border-top: 1px solid $light-mode-color-light;
+    color: $light-mode-color-light;
   }
 }

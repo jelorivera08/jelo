@@ -12,6 +12,10 @@
   height: 100vh;
 }
 
+.container.light {
+  color: $light-mode-color-secondary;
+}
+
 .content {
   height: 100%;
   max-width: 1000px;
@@ -23,9 +27,14 @@
 .header {
   font-size: 32px;
   padding-bottom: 16px;
-  color: #fff;
+  color: $off-white;
   padding-top: 120px;
 }
+
+.header.light {
+  color: $light-mode-color-dark;
+}
+
 .headerText {
   margin-bottom: -8px;
 }
@@ -34,8 +43,12 @@
   color: $color-primary;
 }
 
+.number.light {
+  color: $light-mode-color-primary;
+}
+
 .body {
-  color: #fff;
+  color: $off-white;
   font-size: 18px;
   letter-spacing: 1px;
   padding: 12px 0;
@@ -45,6 +58,10 @@
   align-items: center;
   width: 100%;
   height: 160px;
+}
+
+.body.light {
+  color: $light-mode-color-dark;
 }
 
 .subtitle {

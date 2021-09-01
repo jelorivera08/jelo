@@ -41,6 +41,10 @@
   padding: 6px 0;
 }
 
+.header.light {
+  color: $light-mode-color-light;
+}
+
 .subtitle {
   font-size: 24px;
   font-weight: bold;
@@ -51,6 +55,14 @@
 
   &:hover {
     color: $color-light;
+  }
+}
+
+.subtitle.light {
+  color: $light-mode-color-dark;
+
+  &:hover {
+    color: $light-mode-color-light;
   }
 }
 
@@ -66,10 +78,18 @@
   max-height: 120px;
 }
 
+.bodyContent.light {
+  background-color: $light-mode-color-secondary;
+}
+
 .footer {
   padding: 12px 0;
   color: $color-primary;
   font-size: 14px;
+}
+
+.footer.light {
+  color: $light-mode-color-primary;
 }
 
 .footerItem {
@@ -129,7 +149,7 @@
   .footerItem {
     margin-left: 0;
     margin-right: 12px;
-    color: #fff;
+    color: $off-white;
   }
 
   .subtitle {
@@ -145,5 +165,9 @@
   .links {
     width: 100%;
     text-align: left;
+  }
+
+  .bodyContent.light {
+    background-color: unset;
   }
 }
