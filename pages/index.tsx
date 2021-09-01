@@ -14,6 +14,7 @@ import Career from "sections/career";
 import Contact from "sections/contact";
 import Link from "next/link";
 import { GITHUB } from "lib/constant";
+import Head from "components/head";
 import { FaGithub, FaGithubAlt } from "react-icons/fa";
 
 const Home: NextPage = () => {
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head />
       <main className={classes.home}>
         <AppBar />
         <Intro />
