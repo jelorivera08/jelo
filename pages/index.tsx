@@ -14,7 +14,6 @@ import Career from "sections/career";
 import Contact from "sections/contact";
 import Link from "next/link";
 import { GITHUB } from "lib/constant";
-import Head from "components/head";
 import { FaGithub } from "react-icons/fa";
 import classNames from "classnames";
 import useTheme from "lib/context/theme-provider";
@@ -35,7 +34,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head />
       <main className={classNames(classes.home, { [classes.light]: isLight })}>
         <AppBar />
         <Intro />
