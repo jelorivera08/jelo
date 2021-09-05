@@ -1,24 +1,33 @@
 import React from "react";
 import Image from "next/image";
-import pillars from "public/pillars.png";
 import classes from "./index.module.scss";
 import { FaMedium } from "react-icons/fa";
 import Link from "next/link";
-import { MEDIUM, MEDIUM_ARTICLE } from "lib/constant";
 import classNames from "classnames";
 import useTheme from "lib/context/theme-provider";
 
-const Craft = () => {
+type CraftProps = {
+  title: {
+    text: string;
+    url: string;
+  };
+  description: string;
+  techStack: string[];
+  url: string;
+  image: StaticImageData;
+};
+
+const Craft = ({ title, description, techStack, url, image }: CraftProps) => {
   const { isLight } = useTheme();
 
   return (
     <div className={classes.container}>
       <div
         className={classes.imageContainer}
-        onClick={() => window.open(MEDIUM_ARTICLE, "_blank")}
+        onClick={() => window.open(url, "_blank")}
       >
         <Image
-          src={pillars}
+          src={image}
           className={classes.image}
           alt="pillars"
           layout="fill"
@@ -34,8 +43,8 @@ const Craft = () => {
         <div
           className={classNames(classes.subtitle, { [classes.light]: isLight })}
         >
-          <Link href={MEDIUM_ARTICLE}>
-            <a target="_blank">Medium Articles</a>
+          <Link href={title.url}>
+            <a target="_blank">{title.text}</a>
           </Link>
         </div>
         <div className={classes.body}>
@@ -44,22 +53,22 @@ const Craft = () => {
               [classes.light]: isLight,
             })}
           >
-            Articles that covers a wide range of topics, from the latest tech
-            trends to the best practices of the industry. Centered around the
-            fundamentals of React and Front End Development.
+            {description}
           </div>
         </div>
         <div
           className={classNames(classes.footer, { [classes.light]: isLight })}
         >
-          <span className={classes.footerItem}>React</span>
-          <span className={classes.footerItem}>Typescript</span>
-          <span className={classes.footerItem}>Webpack</span>
+          {techStack.map(tech => (
+            <span key={tech} className={classes.footerItem}>
+              {tech}
+            </span>
+          ))}
         </div>
 
         <div className={classes.links}>
           <FaMedium
-            onClick={() => window.open(MEDIUM, "_blank")}
+            onClick={() => window.open(url, "_blank")}
             className={classNames("clickable", classes.linkIcon)}
           />
         </div>

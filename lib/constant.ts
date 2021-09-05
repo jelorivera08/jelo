@@ -16,3 +16,4 @@ export const METROBANK = "https://metrobank.com.ph/home";
 export const SG = "https://www.scentregroup.com/home-page ";
 export const RANDOM_BINARY_STRING =
   "101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010";
+export const ARIANKITEKTURA = "https://ariankitektura.com";
