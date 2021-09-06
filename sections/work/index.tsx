@@ -5,7 +5,6 @@ import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
 import { useTheMatrix } from "lib/hooks/useTheMatrix";
 import { AboutProps } from "types/about";
 import pillars from "public/pillars.png";
-import ComingSoon from "components/coming-soon";
 import Craft from "components/craft";
 import useTheme from "lib/context/theme-provider";
 import ariankitektura from "public/ariankitektura.png";
