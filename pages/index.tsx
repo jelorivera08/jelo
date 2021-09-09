@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Loader from "components/loader";
+import Head from "next/head";
 import AppBar from "components/appbar";
 import { useRouter } from "next/router";
 import SideBars from "components/sidebars";
@@ -34,6 +35,13 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Jelo Rivera</title>
+        <meta
+          name="description"
+          content="Jelo Rivera is a software engineer whose craft involves creating pleasant and utilitarian web platforms."
+        />
+      </Head>
       <main className={classNames(classes.home, { [classes.light]: isLight })}>
         <AppBar />
         <Intro />
