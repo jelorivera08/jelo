@@ -8,7 +8,12 @@ import pillars from "public/pillars.png";
 import Craft from "components/craft";
 import useTheme from "lib/context/theme-provider";
 import ariankitektura from "public/ariankitektura.png";
-import { MEDIUM, MEDIUM_ARTICLE, ARIANKITEKTURA } from "lib/constant";
+import {
+  MEDIUM,
+  MEDIUM_ARTICLE,
+  ARIANKITEKTURA,
+  ARIANKITEKTURA_GIT,
+} from "lib/constant";
 
 const Work = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
@@ -46,6 +51,7 @@ const Work = ({ asPath }: AboutProps) => {
 
         <div className={classes.body}>
           <Craft
+            isReverse
             title={{
               text: "Ariankitektura Studios",
               url: ARIANKITEKTURA,
@@ -54,6 +60,16 @@ const Work = ({ asPath }: AboutProps) => {
             techStack={["React", "NextJS", "Sass"]}
             url={ARIANKITEKTURA}
             image={ariankitektura}
+            links={[
+              {
+                icon: "website",
+                url: ARIANKITEKTURA,
+              },
+              {
+                icon: "git",
+                url: ARIANKITEKTURA_GIT,
+              },
+            ]}
           />
 
           <Craft
@@ -67,6 +83,12 @@ const Work = ({ asPath }: AboutProps) => {
             techStack={["React", "Typescript", "Webpack"]}
             url={MEDIUM}
             image={pillars}
+            links={[
+              {
+                icon: "medium",
+                url: MEDIUM_ARTICLE,
+              },
+            ]}
           />
         </div>
       </div>

@@ -17,3 +17,6 @@ export const SG = "https://www.scentregroup.com/home-page ";
 export const RANDOM_BINARY_STRING =
   "101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010101010011010101010101010101010101010";
 export const ARIANKITEKTURA = "https://ariankitektura.com";
+
+export const ARIANKITEKTURA_GIT =
+  "https://github.com/jelorivera08/ariankitektura_v2";

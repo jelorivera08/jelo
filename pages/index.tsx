@@ -73,7 +73,7 @@ const Home: NextPage = () => {
           </a>
         </Link>
         <FaGithub
-          fill={isLight ? "#015cc5" : "#ccadbd"}
+          fill={isLight ? "#ccadbd" : "#015cc5"}
           fontSize="20px"
           onClick={() => window.open(GITHUB, "_blank")}
         />
