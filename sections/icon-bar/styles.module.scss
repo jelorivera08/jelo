@@ -1,0 +1,58 @@
+@import 'styles/constants';
+
+.container {
+  margin: 16px 0;
+  overflow: hidden;
+  height: 36px;
+}
+
+.icon {
+  margin-right: 18px;
+  font-size: 32px;
+  cursor: pointer;
+  transform: translateY(-100%);
+  animation: slideDown 0.2s ease-in forwards;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.button {
+  transform: translateY(100%);
+  padding: 12px 24px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-top: 32px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  animation: slideUp 0.3s ease-in forwards 0.3s;
+
+  &:hover {
+    color: $color-primary;
+    border: 1px dashed $color-primary;
+  }
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}
