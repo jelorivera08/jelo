@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import Icon from "components/icon";
-import Button from "components/button";
-import cs from "classnames";
-import Burger from "components/burger";
-import classes from "./index.module.scss";
-import { useMediaQuery } from "react-responsive";
-import { BREAKPOINTS } from "lib/constant";
-import Link from "next/link";
-import { useScrollDirection } from "react-use-scroll-direction";
-import { useEffect } from "react";
-import useTheme from "lib/context/theme-provider";
-import { ImSun } from "react-icons/im";
-import { FaMoon } from "react-icons/fa";
+import React, { useState } from 'react';
+import Icon from 'components/icon';
+import Button from 'components/button';
+import cs from 'classnames';
+import Burger from 'components/burger';
+import classes from './index.module.scss';
+import { useMediaQuery } from 'react-responsive';
+import { BREAKPOINTS } from 'lib/constant';
+import Link from 'next/link';
+import { useScrollDirection } from 'react-use-scroll-direction';
+import { useEffect } from 'react';
+import useTheme from 'lib/context/theme-provider';
+import { ImSun } from 'react-icons/im';
+import { FaMoon } from 'react-icons/fa';
 
 const AppBar = () => {
   const isMobile = useMediaQuery({ query: BREAKPOINTS.MOBILE });
@@ -81,6 +81,9 @@ const AppBar = () => {
             className={cs(classes.darkModeContainer, {
               [classes.light]: isLight,
             })}
+            style={{
+              margin: '0 12px',
+            }}
             onClick={toggleTheme}
           >
             <FaMoon
@@ -105,7 +108,7 @@ const AppBar = () => {
                 classes.menuItem,
                 { [classes.light]: isLight },
                 classes.item0001,
-                "clickable"
+                'clickable',
               )}
             >
               <span
@@ -122,7 +125,7 @@ const AppBar = () => {
                 classes.menuItem,
                 { [classes.light]: isLight },
                 classes.item0010,
-                "clickable"
+                'clickable',
               )}
             >
               <span
@@ -139,7 +142,7 @@ const AppBar = () => {
                 classes.menuItem,
                 { [classes.light]: isLight },
                 classes.item0011,
-                "clickable"
+                'clickable',
               )}
             >
               <span
@@ -157,7 +160,7 @@ const AppBar = () => {
                 classes.menuItem,
                 { [classes.light]: isLight },
                 classes.item0100,
-                "clickable"
+                'clickable',
               )}
             >
               <span
@@ -173,7 +176,7 @@ const AppBar = () => {
             className={cs(
               classes.menuItem,
               { [classes.light]: isLight },
-              classes.resume
+              classes.resume,
             )}
           >
             <Button className={classes.button}>
