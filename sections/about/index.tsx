@@ -1,12 +1,5 @@
 import cs from 'classnames';
-import {
-  UNIVERSITY,
-  GOFLUENT,
-  VC,
-  METROBANK,
-  SG,
-  RANDOM_BINARY_STRING,
-} from 'lib/constant';
+import { UNIVERSITY, GOFLUENT, VC, METROBANK, WP } from 'lib/constant';
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
@@ -128,13 +121,12 @@ const About = ({ asPath }: AboutProps) => {
                   'clickable',
                 )}
               >
-                <Link href={SG}>
-                  <a target="_blank"> Scentre Group</a>
+                <Link href={WP}>
+                  <a target="_blank"> Whispir</a>
                 </Link>
               </span>{' '}
-              as a Software Engineer who is focused on building different
-              digital platforms connecting consumers, retailers and the
-              business.
+              as a Software Engineer who is focused on building an experience
+              that will connect people with the world around them.
             </p>
 
             <div className={cs({ [classes.light]: isLight })}>

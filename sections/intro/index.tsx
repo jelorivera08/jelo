@@ -1,11 +1,11 @@
-import React from "react";
-import Button from "components/button";
-import { EMAIL, SG } from "lib/constant";
-import Link from "next/link";
+import React from 'react';
+import Button from 'components/button';
+import { EMAIL, WP } from 'lib/constant';
+import Link from 'next/link';
 
-import classes from "./index.module.scss";
-import cs from "classnames";
-import useTheme from "lib/context/theme-provider";
+import classes from './index.module.scss';
+import cs from 'classnames';
+import useTheme from 'lib/context/theme-provider';
 
 const Intro = () => {
   const { isLight } = useTheme();
@@ -27,12 +27,12 @@ const Intro = () => {
       and utilitarian digital platforms. Currently, I'm working on creating
       accessible, connection-centered digital products at `}
           <span
-            className={cs(classes.company, "clickable", {
+            className={cs(classes.company, 'clickable', {
               [classes.light]: isLight,
             })}
           >
-            <Link href={SG}>
-              <a target="_blank"> Scentre Group</a>
+            <Link href={WP}>
+              <a target="_blank"> Whispir</a>
             </Link>
           </span>
           .
