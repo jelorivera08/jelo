@@ -1,11 +1,11 @@
-import React from "react";
-import { useState } from "react";
-import cs from "classnames";
-import { Option } from "types/career";
-import classes from "./index.module.scss";
-import Link from "next/link";
-import { GOFLUENT, METROBANK, SG, VC } from "lib/constant";
-import useTheme from "lib/context/theme-provider";
+import React from 'react';
+import { useState } from 'react';
+import cs from 'classnames';
+import { Option } from 'types/career';
+import classes from './index.module.scss';
+import Link from 'next/link';
+import { GOFLUENT, METROBANK, SG, VC } from 'lib/constant';
+import useTheme from 'lib/context/theme-provider';
 
 const NavRail = () => {
   const [active, setActive] = useState<number>(0);
@@ -14,12 +14,68 @@ const NavRail = () => {
 
   const options = [
     {
-      id: "Scentre Group",
-      key: "Scentre Group",
+      id: 'Whispir',
+      key: 'Whispir',
       value: (
         <>
           <div className={classes.header}>
-            <span>Full Stack Web Engineer</span>{" "}
+            <span>Full Stack Web Engineer</span>{' '}
+            <Link passHref href={SG}>
+              <a target="_blank">
+                <span className={classes.company}>@ Whispir</span>
+              </a>
+            </Link>
+          </div>
+
+          <div
+            className={cs(classes.date, {
+              [classes.light]: isLight,
+            })}
+          >
+            October 2021 - Present
+          </div>
+
+          <div className={classes.content}>
+            <div className={classes.text}>
+              <div className={classes.bullet} />
+              <span className={classes.listText}>
+                Build and maintain the new Whispir web platform.
+              </span>
+            </div>
+
+            <div className={classes.text}>
+              <div className={classes.bullet} />
+              <span className={classes.listText}>
+                Create features, Build CI/CD Pipeline and setup End-to-End
+                tests.
+              </span>
+            </div>
+
+            <div className={classes.text}>
+              <div className={classes.bullet} />
+              <span className={classes.listText}>
+                Utilize serverless and cloud AWS infrastructure in delivering
+                key components for Whispir.
+              </span>
+            </div>
+
+            <div className={classes.text}>
+              <div className={classes.bullet} />
+              <span className={classes.listText}>
+                Work within a diverse team of engineers and designers.
+              </span>
+            </div>
+          </div>
+        </>
+      ),
+    },
+    {
+      id: 'Scentre Group',
+      key: 'Scentre Group',
+      value: (
+        <>
+          <div className={classes.header}>
+            <span>Full Stack Web Engineer</span>{' '}
             <Link passHref href={SG}>
               <a target="_blank">
                 <span className={classes.company}>@ Scentre Group</span>
@@ -73,12 +129,12 @@ const NavRail = () => {
       ),
     },
     {
-      id: "Virtual Control",
-      key: "Virtual Control",
+      id: 'Virtual Control',
+      key: 'Virtual Control',
       value: (
         <>
           <div className={classes.header}>
-            <span>Senior Front End Engineer</span>{" "}
+            <span>Senior Front End Engineer</span>{' '}
             <Link passHref href={VC}>
               <a target="_blank">
                 <span className={classes.company}>@ Virtual Control</span>
@@ -125,12 +181,12 @@ const NavRail = () => {
       ),
     },
     {
-      id: "GoFluent",
-      key: "GoFluent",
+      id: 'GoFluent',
+      key: 'GoFluent',
       value: (
         <>
           <div className={classes.header}>
-            <span>Front End Engineer</span>{" "}
+            <span>Front End Engineer</span>{' '}
             <Link passHref href={GOFLUENT}>
               <a target="_blank">
                 <span className={classes.company}>@ GoFluent</span>
@@ -176,12 +232,12 @@ const NavRail = () => {
       ),
     },
     {
-      id: "Metrobank",
-      key: "Metrobank",
+      id: 'Metrobank',
+      key: 'Metrobank',
       value: (
         <>
           <div className={classes.header}>
-            <span>Software Engineer</span>{" "}
+            <span>Software Engineer</span>{' '}
             <Link passHref href={METROBANK}>
               <a target="_blank">
                 <span className={classes.company}>@ Metrobank</span>
@@ -240,7 +296,7 @@ const NavRail = () => {
           },
           {
             [classes.selected]: isActive,
-          }
+          },
         )}
         key={option.id}
         onClick={handleClick(index)}
@@ -261,7 +317,7 @@ const NavRail = () => {
           { [classes.light]: isLight },
           {
             [classes.optionValueAnimation]: isActive,
-          }
+          },
         )}
       >
         {option.value}
