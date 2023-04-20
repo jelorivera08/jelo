@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import cs from "classnames";
-import Link from "next/link";
-import Button from "components/button";
-import { Twirl as Hamburger } from "hamburger-react";
-import classes from "./index.module.scss";
-import useTheme from "lib/context/theme-provider";
+import React, { useState } from 'react';
+import cs from 'classnames';
+import Link from 'next/link';
+import Button from 'components/button';
+import { Twirl as Hamburger } from 'hamburger-react';
+import classes from './index.module.scss';
+import useTheme from 'lib/context/theme-provider';
 
 const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Burger = () => {
         <Hamburger
           toggled={isOpen}
           toggle={setIsOpen}
-          color={isLight ? "#e36208" : "#68b1d8"}
+          color={isLight ? '#e36208' : '#68b1d8'}
         />
       </div>
 
@@ -28,7 +28,7 @@ const Burger = () => {
               className={cs(
                 classes.menuItem,
                 { [classes.light]: isLight },
-                "clickable"
+                'clickable',
               )}
               onClick={handleClose}
             >
@@ -36,16 +36,16 @@ const Burger = () => {
                 className={cs(classes.itemNumber, { [classes.light]: isLight })}
               >
                 0001:
-              </div>{" "}
+              </div>{' '}
               <div>About</div>
             </div>
           </Link>
-          <Link passHref href="/#career">
+          <Link passHref href="/#tech">
             <div
               className={cs(
                 classes.menuItem,
                 { [classes.light]: isLight },
-                "clickable"
+                'clickable',
               )}
               onClick={handleClose}
             >
@@ -53,7 +53,24 @@ const Burger = () => {
                 className={cs(classes.itemNumber, { [classes.light]: isLight })}
               >
                 0010:
-              </div>{" "}
+              </div>{' '}
+              <div>Tech</div>
+            </div>
+          </Link>
+          <Link passHref href="/#career">
+            <div
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                'clickable',
+              )}
+              onClick={handleClose}
+            >
+              <div
+                className={cs(classes.itemNumber, { [classes.light]: isLight })}
+              >
+                0011:
+              </div>{' '}
               <div>Experience</div>
             </div>
           </Link>
@@ -62,15 +79,15 @@ const Burger = () => {
               className={cs(
                 classes.menuItem,
                 { [classes.light]: isLight },
-                "clickable"
+                'clickable',
               )}
               onClick={handleClose}
             >
               <div
                 className={cs(classes.itemNumber, { [classes.light]: isLight })}
               >
-                0011:
-              </div>{" "}
+                0100:
+              </div>{' '}
               <div>Work</div>
             </div>
           </Link>
@@ -79,15 +96,15 @@ const Burger = () => {
               className={cs(
                 classes.menuItem,
                 { [classes.light]: isLight },
-                "clickable"
+                'clickable',
               )}
               onClick={handleClose}
             >
               <div
                 className={cs(classes.itemNumber, { [classes.light]: isLight })}
               >
-                0100:
-              </div>{" "}
+                0101:
+              </div>{' '}
               <div>Contact</div>
             </div>
           </Link>

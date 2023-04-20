@@ -1,23 +1,24 @@
-import type { NextPage } from "next";
-import Loader from "components/loader";
-import Head from "next/head";
-import AppBar from "components/appbar";
-import { useRouter } from "next/router";
-import SideBars from "components/sidebars";
-import Intro from "sections/intro";
-import { stripSpecialCharacters } from "lib/util";
-import { useEffect, useState } from "react";
-import cs from "classnames";
-import classes from "styles/home.module.scss";
-import About from "sections/about";
-import Work from "sections/work";
-import Career from "sections/career";
-import Contact from "sections/contact";
-import Link from "next/link";
-import { GITHUB } from "lib/constant";
-import { FaGithub } from "react-icons/fa";
-import classNames from "classnames";
-import useTheme from "lib/context/theme-provider";
+import type { NextPage } from 'next';
+import Loader from 'components/loader';
+import Head from 'next/head';
+import AppBar from 'components/appbar';
+import { useRouter } from 'next/router';
+import SideBars from 'components/sidebars';
+import Intro from 'sections/intro';
+import { stripSpecialCharacters } from 'lib/util';
+import { useEffect, useState } from 'react';
+import cs from 'classnames';
+import classes from 'styles/home.module.scss';
+import About from 'sections/about';
+import Work from 'sections/work';
+import Career from 'sections/career';
+import Contact from 'sections/contact';
+import Link from 'next/link';
+import { GITHUB } from 'lib/constant';
+import { FaGithub } from 'react-icons/fa';
+import classNames from 'classnames';
+import useTheme from 'lib/context/theme-provider';
+import Tech from 'sections/tech';
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +47,7 @@ const Home: NextPage = () => {
         <AppBar />
         <Intro />
         <About asPath={asPath} />
+        <Tech asPath={asPath} />
         <Career asPath={asPath} />
         <Work asPath={asPath} />
         <Contact asPath={asPath} />
@@ -57,14 +59,14 @@ const Home: NextPage = () => {
         })}
       >
         <FaGithub
-          fill={isLight ? "#015cc5" : "#ccadbd"}
+          fill={isLight ? '#015cc5' : '#ccadbd'}
           fontSize="20px"
-          onClick={() => window.open(GITHUB, "_blank")}
+          onClick={() => window.open(GITHUB, '_blank')}
         />
 
         <Link href={GITHUB}>
           <a
-            className={cs("clickable", classes.text, {
+            className={cs('clickable', classes.text, {
               [classes.light]: isLight,
             })}
             target="_blank"
@@ -73,9 +75,9 @@ const Home: NextPage = () => {
           </a>
         </Link>
         <FaGithub
-          fill={isLight ? "#ccadbd" : "#015cc5"}
+          fill={isLight ? '#ccadbd' : '#015cc5'}
           fontSize="20px"
-          onClick={() => window.open(GITHUB, "_blank")}
+          onClick={() => window.open(GITHUB, '_blank')}
         />
       </footer>
     </>

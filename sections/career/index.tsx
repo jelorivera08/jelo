@@ -1,11 +1,11 @@
-import cs from "classnames";
-import React, { useEffect, useRef } from "react";
-import classes from "./index.module.scss";
-import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
-import { useTheMatrix } from "lib/hooks/useTheMatrix";
-import { AboutProps } from "types/about";
-import NavRail from "components/navrail";
-import useTheme from "lib/context/theme-provider";
+import cs from 'classnames';
+import React, { useEffect, useRef } from 'react';
+import classes from './index.module.scss';
+import { useWasOnScreen } from 'lib/hooks/useWasOnScreen';
+import { useTheMatrix } from 'lib/hooks/useTheMatrix';
+import { AboutProps } from 'types/about';
+import NavRail from 'components/navrail';
+import useTheme from 'lib/context/theme-provider';
 
 const Career = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
@@ -14,8 +14,8 @@ const Career = ({ asPath }: AboutProps) => {
   const { isLight } = useTheme();
 
   useEffect(() => {
-    if (asPath === "career") {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
+    if (asPath === 'career') {
+      ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [asPath]);
 
@@ -26,15 +26,15 @@ const Career = ({ asPath }: AboutProps) => {
       className={cs(
         classes.container,
         { [classes.light]: isLight },
-        { [classes.show]: wasInViewport }
+        { [classes.show]: wasInViewport },
       )}
     >
       <div className={classes.content}>
         <div className={classes.header}>
           <div className={cs(classes.headerText, { [classes.light]: isLight })}>
             <span className={cs(classes.number, { [classes.light]: isLight })}>
-              {" "}
-              0010:{" "}
+              {' '}
+              0011:{' '}
             </span>
             My career
           </div>

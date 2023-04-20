@@ -1,19 +1,19 @@
-import cs from "classnames";
-import React, { useEffect, useRef } from "react";
-import classes from "./index.module.scss";
-import { useWasOnScreen } from "lib/hooks/useWasOnScreen";
-import { useTheMatrix } from "lib/hooks/useTheMatrix";
-import { AboutProps } from "types/about";
-import pillars from "public/pillars.png";
-import Craft from "components/craft";
-import useTheme from "lib/context/theme-provider";
-import ariankitektura from "public/ariankitektura.png";
+import cs from 'classnames';
+import React, { useEffect, useRef } from 'react';
+import classes from './index.module.scss';
+import { useWasOnScreen } from 'lib/hooks/useWasOnScreen';
+import { useTheMatrix } from 'lib/hooks/useTheMatrix';
+import { AboutProps } from 'types/about';
+import pillars from 'public/pillars.png';
+import Craft from 'components/craft';
+import useTheme from 'lib/context/theme-provider';
+import ariankitektura from 'public/ariankitektura.png';
 import {
   MEDIUM,
   MEDIUM_ARTICLE,
   ARIANKITEKTURA,
   ARIANKITEKTURA_GIT,
-} from "lib/constant";
+} from 'lib/constant';
 
 const Work = ({ asPath }: AboutProps) => {
   const matrix = useTheMatrix();
@@ -22,8 +22,8 @@ const Work = ({ asPath }: AboutProps) => {
   const { isLight } = useTheme();
 
   useEffect(() => {
-    if (asPath === "work") {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
+    if (asPath === 'work') {
+      ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [asPath]);
 
@@ -34,15 +34,15 @@ const Work = ({ asPath }: AboutProps) => {
       className={cs(
         classes.container,
         { [classes.light]: isLight },
-        { [classes.show]: wasInViewport }
+        { [classes.show]: wasInViewport },
       )}
     >
       <div className={classes.content}>
         <div className={classes.header}>
           <div className={cs(classes.headerText, { [classes.light]: isLight })}>
             <span className={cs(classes.number, { [classes.light]: isLight })}>
-              {" "}
-              0011:{" "}
+              {' '}
+              0100:{' '}
             </span>
             My craft
           </div>
@@ -53,20 +53,20 @@ const Work = ({ asPath }: AboutProps) => {
           <Craft
             isReverse
             title={{
-              text: "Ariankitektura Studios",
+              text: 'Ariankitektura Studios',
               url: ARIANKITEKTURA,
             }}
             description="Ariankitektura is a studio web platform exhibiting the various projects built and designed by Architent Arian Sustento."
-            techStack={["React", "NextJS", "Sass"]}
+            techStack={['React', 'NextJS', 'Sass']}
             url={ARIANKITEKTURA}
             image={ariankitektura}
             links={[
               {
-                icon: "website",
+                icon: 'website',
                 url: ARIANKITEKTURA,
               },
               {
-                icon: "git",
+                icon: 'git',
                 url: ARIANKITEKTURA_GIT,
               },
             ]}
@@ -74,18 +74,18 @@ const Work = ({ asPath }: AboutProps) => {
 
           <Craft
             title={{
-              text: "Medium Articles",
+              text: 'Medium Articles',
               url: MEDIUM_ARTICLE,
             }}
             description="Articles that covers a wide range of topics, from the latest tech
             trends to the best practices of the industry. Centered around the
             fundamentals of React and Front End Development."
-            techStack={["React", "Typescript", "Webpack"]}
+            techStack={['React', 'Typescript', 'Webpack']}
             url={MEDIUM}
             image={pillars}
             links={[
               {
-                icon: "medium",
+                icon: 'medium',
                 url: MEDIUM_ARTICLE,
               },
             ]}

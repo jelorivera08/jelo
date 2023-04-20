@@ -119,6 +119,23 @@ const AppBar = () => {
               : About
             </div>
           </Link>
+          <Link passHref href="/#tech">
+            <div
+              className={cs(
+                classes.menuItem,
+                { [classes.light]: isLight },
+                classes.item0001,
+                'clickable',
+              )}
+            >
+              <span
+                className={cs(classes.menuNumber, { [classes.light]: isLight })}
+              >
+                0010
+              </span>
+              : Tech
+            </div>
+          </Link>
           <Link passHref href="/#career">
             <div
               className={cs(
@@ -131,7 +148,7 @@ const AppBar = () => {
               <span
                 className={cs(classes.menuNumber, { [classes.light]: isLight })}
               >
-                0010
+                0011
               </span>
               : Experience
             </div>
@@ -148,7 +165,7 @@ const AppBar = () => {
               <span
                 className={cs(classes.menuNumber, { [classes.light]: isLight })}
               >
-                0011
+                0100
               </span>
               : Work
             </div>
@@ -166,7 +183,7 @@ const AppBar = () => {
               <span
                 className={cs(classes.menuNumber, { [classes.light]: isLight })}
               >
-                0100
+                0101
               </span>
               : Contact
             </div>
