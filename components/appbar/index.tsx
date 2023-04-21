@@ -38,7 +38,7 @@ const AppBar = () => {
           <div className={classes.icon}>
             <Icon />
           </div>
-          <div className={classes.burgetAndDM}>
+          <div className={classes.burgerAndDM}>
             <div
               className={cs(classes.darkModeContainer, {
                 [classes.light]: isLight,

@@ -1,3 +1,6 @@
+@import "styles/variables";
+@import "styles/animations";
+
 .skill_text {
   font-size: 1.25rem;
   width: 10rem;
@@ -21,8 +24,12 @@
   display: flex;
 }
 
-.star_outline {
-  /* margin-left: 40px; */
+.light {
+  color: $light-mode-color-dark;
+}
+
+.star_outline.light {
+  color: $light-mode-color-dark;
 }
 
 .star {
@@ -33,6 +40,7 @@
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+
 
 .star:nth-child(1) {
   animation-delay: 0.1s;
